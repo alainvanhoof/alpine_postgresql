@@ -1,7 +1,6 @@
 galaxy_info:
-  author: your name
-  description: your description
-  company: your company (optional)
+  author: Alain van Hoof
+  description: PostgreSQL for Alpine Linux
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -152,8 +151,9 @@ galaxy_info:
   #  - squeeze
   #  - stretch
   #  - wheezy
-  #- name: Alpine
-  #  versions:
+  - name: Alpine
+    versions:
+     - 3.5
   #  - all
   #  - any
   #- name: EL
