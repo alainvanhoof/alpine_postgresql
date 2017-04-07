@@ -11,20 +11,20 @@ To run the "agent-less" ansible against Alpine Linux it needs python, sudo and i
 Role Variables
 --------------
 
-pg_primary: undefined
-pg_standby_addr: undefined
-pg_standby: undefined
-pg_primary_addr: undefined
-pg_version: "9.6"
-pg_db_name: "example"
-pg_db_user: "example"
-pg_db_pass: "example"
-pg_db_priv: "ALL"
-pg_db_encoding: "UTF8"
-pg_listen_addr: "'*'"
-pg_data_dir: "/var/lib/postgresql/{{ pg_version}}/data"
-pg_repl_user: "repl"
-pg_repl_pass: "repl"
+* pg_primary: undefined
+* pg_standby_addr: undefined
+* pg_standby: undefined
+* pg_primary_addr: undefined
+* pg_version: "9.6"
+* pg_db_name: "example"
+* pg_db_user: "example"
+* pg_db_pass: "example"
+* pg_db_priv: "ALL"
+* pg_db_encoding: "UTF8"
+* pg_listen_addr: "'*'"
+* pg_data_dir: "/var/lib/postgresql/{{ pg_version}}/data"
+* pg_repl_user: "repl"
+* pg_repl_pass: "repl"
 
 Dependencies
 ------------
