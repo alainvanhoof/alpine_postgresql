@@ -33,8 +33,7 @@ Example Playbook
 ----------------
 
 Create a cluster on dev-postgresql-01 and dev-postgresql-02 with a initial database test:
-
-`
+```yaml
 - hosts: dev-postgresql-01
   become: true
   roles:
@@ -43,14 +42,14 @@ Create a cluster on dev-postgresql-01 and dev-postgresql-02 with a initial datab
   become: true
   roles:
     - { role: alpine_postgresql, pg_standby: true, pg_primary_addr: "IP or HOSTNAME of primary" }
-`
+```
 Create a standalone postgreSQL on dev-postgresql-03 listing only on localhost
-
-`- hosts: dev-postgresql-03
+```yaml
+- hosts: dev-postgresql-03
   become: true
   roles:
     - { role: alpine_postgresql, pg_listen_addr: localhost, pg_db_name: test2, pg_db_user: test2user, pg_db_pass: test2pass }
-`
+```
 
 
 License
