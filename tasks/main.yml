@@ -126,7 +126,7 @@
     - standby_active.stat.isreg is undefined
 
 - name: Sync data directory from primary
-  command: su - postgres -c 'PGPASSWORD=repl pg_basebackup -h {{ pg_primary_addr }} -D {{ pg_data_dir }} -U repl -w -v -P --xlog-method=stream -R'
+  command: su - postgres -c 'PGPASSWORD=repl pg_basebackup -h {{ pg_primary_addr }} -D {{ pg_data_dir }} -U repl -Fp -Xs -c fast -v -P -R'
   when: 
     - pg_standby is defined
     - standby_active.stat.isreg is undefined
