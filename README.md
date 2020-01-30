@@ -6,7 +6,7 @@ This role creates a running PostgreSQL instance or running PostgreSQL cluster (2
 Requirements
 ------------
 
-To run the "agent-less" ansible against Alpine Linux it needs python, sudo and iproute2 install (use apk).
+To run the "agent-less" ansible against Alpine Linux it needs python3, sudo and iproute2 install (use apk).
 
 Role Variables
 --------------

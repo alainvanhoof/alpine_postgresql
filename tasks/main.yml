@@ -9,7 +9,7 @@
 
 - name: Install Python PostgreSQL module
   apk:
-    name: py-psycopg2
+    name: py3-psycopg2
     state: present
     update_cache: yes
 
