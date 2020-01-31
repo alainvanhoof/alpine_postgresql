@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This role creates a running PostgreSQL instance or running PostgreSQL cluster (2 nodes) on Alpine Linux
+This role creates a running PostgreSQL instance or a running PostgreSQL cluster (2 nodes) on Alpine Linux
 
 Requirements
 ------------
@@ -15,7 +15,7 @@ Role Variables
 * pg_standby_addr: undefined
 * pg_standby: undefined
 * pg_primary_addr: undefined
-* pg_version: "10"
+* pg_version: "12"
 * pg_db_name: "example"
 * pg_db_user: "example"
 * pg_db_pass: "example"
