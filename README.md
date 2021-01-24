@@ -15,7 +15,7 @@ Role Variables
 * pg_standby_addr: undefined
 * pg_standby: undefined
 * pg_primary_addr: undefined
-* pg_version: "12"
+* pg_version: "13"
 * pg_db_name: "example"
 * pg_db_user: "example"
 * pg_db_pass: "example"

@@ -111,7 +111,8 @@
   when: pg_primary is defined or pg_standby is defined
   notify: Restart postgresql
 
-- stat: path={{ pg_data_dir }}/recovery.conf
+- name: Check for active standby
+  stat: path={{ pg_data_dir }}/recovery.conf
   register: standby_active
   when: pg_standby is defined
 
