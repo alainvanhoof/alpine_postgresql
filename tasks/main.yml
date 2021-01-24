@@ -15,7 +15,7 @@
 
 - name: Change Startup-timeout to 20 seconds
   lineinfile:
-    dest: /etc/conf.d/postgresql 
+    dest: /etc/conf.d/postgresql
     regexp: '#start_timeout=10'
     line: 'start_timeout=20'
 
@@ -87,7 +87,7 @@
   when: pg_primary is defined
   notify: Restart postgresql
 
-- name: Change archive_command 
+- name: Change archive_command
   lineinfile:
     dest: '/etc/postgresql/postgresql.conf'
     regexp: '.*archive_command =.*'
@@ -120,7 +120,7 @@
   file:
     dest: '{{ pg_data_dir }}'
     state: absent
-  when: 
+  when:
     - pg_standby is defined
     - standby_active.stat.isreg is undefined
 
@@ -131,13 +131,13 @@
     mode: 0700
     owner: postgres
     group: postgres
-  when: 
+  when:
     - pg_standby is defined
     - standby_active.stat.isreg is undefined
 
 - name: Sync data directory from primary
   command: su - postgres -c 'PGPASSWORD=repl pg_basebackup -h {{ pg_primary_addr }} -D {{ pg_data_dir }} -U repl -Fp -Xs -c fast -v -P -R'
-  when: 
+  when:
     - pg_standby is defined
     - standby_active.stat.isreg is undefined
 

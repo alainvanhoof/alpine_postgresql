@@ -5,7 +5,7 @@ galaxy_info:
   min_ansible_version: 2.0
   platforms:
     - name: Alpine
-  galaxy_tags: 
+  galaxy_tags:
     - alpine
     - postgresql
   dependencies: []
